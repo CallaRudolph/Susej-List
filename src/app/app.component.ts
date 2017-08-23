@@ -10,9 +10,5 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Susejlist';
 
-  // masterPersonalList: Personal [] = [
-  //   new Personal
-  // ];
-
   constructor(private router: Router) {}
 }
