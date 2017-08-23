@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { PersonalComponent } from './personal/personal.component';
 import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
+import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'for-sale',
     component: ForSaleComponent
+  },
+  {
+    path: 'for-sale/:id',
+    component: ForSaleDetailComponent
   }
 ];
 

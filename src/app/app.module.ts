@@ -12,6 +12,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditPersonalComponent } from './edit-personal/edit-personal.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
+import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     AboutComponent,
     PersonalDetailComponent,
     EditPersonalComponent,
-    ForSaleComponent
+    ForSaleComponent,
+    ForSaleDetailComponent
   ],
   imports: [
     BrowserModule,

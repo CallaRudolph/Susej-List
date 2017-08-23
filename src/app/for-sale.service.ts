@@ -18,6 +18,8 @@ export class ForSaleService {
     this.forSale.push(newForSale);
   }
 
-  
+  getForSaleById(forSaleId: string) {
+    return this.database.object('/for-sale/' + forSaleId);
+  }
 
 }
