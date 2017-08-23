@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { PersonalComponent } from './personal/personal.component';
 import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
-
+import { ForSaleComponent } from './for-sale/for-sale.component';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'personals/:id',
     component: PersonalDetailComponent
+  },
+  {
+    path: 'for-sale',
+    component: ForSaleComponent
   }
 ];
 

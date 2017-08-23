@@ -1,0 +1,37 @@
+<h2>For Sale</h2>
+
+<div *ngFor="let item of forSale | async" (click)="goToDetailPage(item)">
+  <div>
+    <h3><em>{{item.title}}</em></h3>
+  </div>
+</div>
+<br><br><br>
+<hr>
+<h3>Add some more stuff to sell</h3>
+<div>
+  <div>
+    <label>Grab their attention with a title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Where can this be purchased?</label>
+    <br>
+    <input #newLocation>
+  </div>
+
+  <div>
+    <label>How much do you want for it?</label>
+    <br>
+    <input #newPrice>
+  </div>
+
+  <div>
+    <label>Tell the world all about it</label>
+    <br>
+    <textarea #newBody></textarea>
+  </div>
+</div>
+
+<button (click)="submitForm(newTitle.value, newLocation.value, newPrice.value, newBody.value); newTitle.value=''; newLocation.value=''; newPrice.value=''; newBody.value='';">Get it sold!</button>
