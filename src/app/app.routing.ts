@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { PersonalComponent } from './personal/personal.component';
-// import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
 
 
 const appRoutes: Routes = [
@@ -13,6 +13,10 @@ const appRoutes: Routes = [
   {
     path: 'personal',
     component: PersonalComponent
+  },
+  {
+    path: 'personal/:id',
+    component: PersonalDetailComponent
   }
 ];
 

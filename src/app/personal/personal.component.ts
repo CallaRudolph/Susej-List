@@ -10,14 +10,17 @@ import { Router } from '@angular/router';
 })
 export class PersonalComponent implements OnInit {
 
-  masterPersonalList: Personal [] = [
-    new Personal('Look, listen, love', 'East Esplanade', 48, 'Send me yr a/s/l?'),
-    new Personal('Uber', 'Hawthorne', 19, 'YOU WERE BUMPING DRAKE. CALL ME ON MY CELLI, BB')
+  personals: Personal [] = [
+    new Personal('Look, listen, love', 'East Esplanade', 48, 'Send me yr a/s/l?', 1),
+    new Personal('Uber', 'Hawthorne', 19, 'YOU WERE BUMPING DRAKE. CALL ME ON MY CELLI, BB', 2)
   ];
 
-  constructor() { }
+  constructor(private router: Router){}
 
   ngOnInit() {
   }
 
+  goToDetailPage(clickedPersonal: Personal) {
+     this.router.navigate(['personal', clickedPersonal.id]);
+   };
 }
