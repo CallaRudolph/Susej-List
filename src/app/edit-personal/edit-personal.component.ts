@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Personal } from '../personal.model';
 import { PersonalService } from '../personal.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-personal',
@@ -11,7 +12,7 @@ import { PersonalService } from '../personal.service';
 export class EditPersonalComponent implements OnInit {
   @Input() selectedPersonal;
 
-  constructor(private personalService: PersonalService) { }
+  constructor(private router: Router, private personalService: PersonalService) { }
 
   ngOnInit() {
     console.log(this.selectedPersonal);
@@ -19,5 +20,12 @@ export class EditPersonalComponent implements OnInit {
 
   beginUpdatingPersonal(personalToUpdate) {
     this.personalService.updatePersonal(personalToUpdate);
+  }
+
+  beginDeletingPersonal(personalToDelete) {
+    if(confirm("sure??")){
+      this.personalService.deletePersonal(personalToDelete);
+      this.router.navigate(['personal']);
+    }
   }
 }

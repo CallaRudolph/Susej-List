@@ -30,4 +30,9 @@ export class PersonalService {
                                     age: localUpdatedPersonal.age,
                                     body: localUpdatedPersonal.body});
   }
+
+  deletePersonal(localPersonalToDelete) {
+    var personalEntryInFirebase = this.getPersonalById(localPersonalToDelete.$key);
+    personalEntryInFirebase.remove();
+  }
 }
