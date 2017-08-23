@@ -1,5 +1,26 @@
 # Craigslist
 
+
+## Installation instructions
+* for firebase:
+* First off, you'll need to make a free account at Firebase's website. [Firebase](https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup)
+* Create a New Project. Select this option, provide a name for your new project, and select your Country/region from the drop-down menu.
+* Select Add Firebase to your web app.
+* make src/app/api-keys.ts
+* paste the code below into your api-keys.ts file.
+
+````
+export var masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "xxxx"
+  };
+
+````
+* With the information provided in the modal, replace the "xxxx" variables with your own firebase credentials in your api-keys.ts file.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
