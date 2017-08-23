@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Personal } from '../personal.model';
 import { Router } from '@angular/router';
-
+import { PersonalService } from '../personal.service';
 
 @Component({
   selector: 'app-personal',
   templateUrl: './personal.component.html',
-  styleUrls: ['./personal.component.css']
+  styleUrls: ['./personal.component.css'],
+  providers: [PersonalService]
 })
 export class PersonalComponent implements OnInit {
 
-  personals: Personal [] = [
-    new Personal('Look, listen, love', 'East Esplanade', 48, 'Send me yr a/s/l?', 1),
-    new Personal('Uber', 'Hawthorne', 19, 'YOU WERE BUMPING DRAKE. CALL ME ON MY CELLI, BB', 2)
-  ];
+  personals: Personal [];
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private personalService: PersonalService) {}
 
   ngOnInit() {
+    this.personals = this.personalService.getPersonals();
   }
 
   goToDetailPage(clickedPersonal: Personal) {
