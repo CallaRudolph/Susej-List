@@ -1,7 +1,36 @@
 <h2>Personals</h2>
 
-<div *ngFor="let personal of personals" (click)="goToDetailPage(personal)">
+<div *ngFor="let personal of personals | async" (click)="goToDetailPage(personal)">
   <div>
     <h3><em>{{personal.title}}</em></h3>
   </div>
 </div>
+
+<h3>Make some more missed connections</h3>
+<div>
+  <div>
+    <label>Grab their attention with title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Where did this occur?:</label>
+    <br>
+    <input #newLocation>
+  </div>
+
+  <div>
+    <label>What's yr age?:</label>
+    <br>
+    <input #newAge>
+  </div>
+
+  <div>
+    <label>Tell the world all about it</label>
+    <br>
+    <textarea #newBody></textarea>
+  </div>
+</div>
+
+<button (click)="submitForm(newTitle.value, newLocation.value, newAge.value, newBody.value); newTitle.value=''; newLocation.value=''; newAge.value=''; newBody.value='';">Make it happen</button>

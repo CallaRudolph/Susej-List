@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Personal } from '../personal.model';
 import { Router } from '@angular/router';
 import { PersonalService } from '../personal.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-personal',
@@ -11,7 +12,7 @@ import { PersonalService } from '../personal.service';
 })
 export class PersonalComponent implements OnInit {
 
-  personals: Personal [];
+  personals: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private personalService: PersonalService) {}
 
@@ -20,6 +21,11 @@ export class PersonalComponent implements OnInit {
   }
 
   goToDetailPage(clickedPersonal: Personal) {
-     this.router.navigate(['personal', clickedPersonal.id]);
-   };
+    // this.router.navigate(['personal', clickedPersonal.id]);
+  }
+
+  submitForm(title: string, location: string, age: number, body: string) {
+    var newPersonal: Personal = new Personal(title, location, age, body);
+    console.log(newPersonal);
+  }
 }
