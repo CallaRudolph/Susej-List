@@ -20,8 +20,8 @@ export class PersonalComponent implements OnInit {
     this.personals = this.personalService.getPersonals();
   }
 
-  goToDetailPage(clickedPersonal: Personal) {
-    // this.router.navigate(['personal', clickedPersonal.id]);
+  goToDetailPage(clickedPersonal) {
+    this.router.navigate(['personals', clickedPersonal.$key]);
   }
 
   submitForm(title: string, location: string, age: number, body: string) {

@@ -19,11 +19,7 @@ export class PersonalService {
     this.personals.push(newPersonal);
   }
 
-  getPersonalById(personalId: number) {
-    // for (var i = 0; i <= PERSONALS.length -1; i++) {
-    //   if (PERSONALS[i].id === personalId) {
-    //     return PERSONALS[i];
-    //   }
-    // }
+  getPersonalById(personalId: string) {
+    return this.database.object('personals/' + personalId);
   }
 }

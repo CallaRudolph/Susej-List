@@ -1,6 +1,6 @@
 <h3><a routerLink="personal">Personals</a></h3>
 <br>
-<h2>{{personalToDisplay.title}}</h2>
-<h4>{{personalToDisplay.location}}, {{personalToDisplay.age}} years old</h4>
+<h2>{{(personalToDisplay | async).title}}</h2>
+<h4>{{(personalToDisplay | async).location}}, {{(personalToDisplay | async).age}} years old</h4>
 <br>
-<h4>"{{personalToDisplay.body}}"</h4>
+<h4>"{{(personalToDisplay | async).body}}"</h4>
