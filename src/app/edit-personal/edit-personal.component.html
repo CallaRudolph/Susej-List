@@ -1,0 +1,18 @@
+<h4>Edit this</h4>
+
+<label>New Title:</label>
+<input [(ngModel)]="selectedPersonal.title">
+<br>
+
+<label>Change location:</label>
+<input [(ngModel)]="selectedPersonal.location">
+<br>
+
+<label>New age(?):</label>
+<input [(ngModel)]="selectedPersonal.age">
+<br>
+
+<label>New Description:</label>
+<input [(ngModel)]="selectedPersonal.body">
+
+<button (click)="beginUpdatingPersonal(selectedPersonal)">Update it</button>

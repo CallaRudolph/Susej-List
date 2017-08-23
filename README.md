@@ -2,6 +2,8 @@
 
 
 ## Installation instructions
+* $ `npm install`
+* $ `bower install`
 * for firebase:
 * First off, you'll need to make a free account at Firebase's website. [Firebase](https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup)
 * Create a New Project. Select this option, provide a name for your new project, and select your Country/region from the drop-down menu.

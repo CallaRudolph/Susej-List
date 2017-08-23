@@ -10,6 +10,7 @@ import { PersonalDetailComponent } from './personal-detail/personal-detail.compo
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { EditPersonalComponent } from './edit-personal/edit-personal.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     AppComponent,
     PersonalComponent,
     AboutComponent,
-    PersonalDetailComponent
+    PersonalDetailComponent,
+    EditPersonalComponent
   ],
   imports: [
     BrowserModule,

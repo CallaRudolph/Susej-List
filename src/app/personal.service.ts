@@ -20,6 +20,14 @@ export class PersonalService {
   }
 
   getPersonalById(personalId: string) {
-    return this.database.object('personals/' + personalId);
+    return this.database.object('/personals/' + personalId);
+  }
+
+  updatePersonal(localUpdatedPersonal) {
+    var personalEntryInFirebase = this.getPersonalById(localUpdatedPersonal.$key);
+    personalEntryInFirebase.update({title: localUpdatedPersonal.title,
+                                    location: localUpdatedPersonal.location,
+                                    age: localUpdatedPersonal.age,
+                                    body: localUpdatedPersonal.body});
   }
 }
