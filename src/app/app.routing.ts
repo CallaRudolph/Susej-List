@@ -1,13 +1,13 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PersonalsComponent } from './personals/personals.component';
+import { PersonalComponent } from './personal/personal.component';
 // import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: PersonalsComponent
+    component: PersonalComponent
   }
 ];
 

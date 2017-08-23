@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Personals } from './personals.model';
+import { Personal } from './personal.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Susejlist';
 
-  // masterPersonalsList: Personals [] = [
+  // masterPersonalList: Personal [] = [
   //   new Personal
   // ];
 

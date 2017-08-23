@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppComponent } from './app.component';
-import { PersonalsComponent } from './personals/personals.component';
+import { PersonalComponent } from './personal/personal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonalsComponent
+    PersonalComponent
   ],
   imports: [
     BrowserModule,
