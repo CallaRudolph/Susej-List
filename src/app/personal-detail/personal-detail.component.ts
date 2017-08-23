@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { Personal } from '../personal.model';
 import { Router } from '@angular/router';
 
@@ -8,10 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./personal-detail.component.css']
 })
 export class PersonalDetailComponent implements OnInit {
+  personalId: number = null;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+  this.personalId = parseInt(urlParameters['id']);
+});
   }
 
 }
