@@ -21,7 +21,7 @@ export class PersonalDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.personalId = parseInt(urlParameters['id']);
     });
-    this.personalToDisplay = this.personalService.getPersonalById(this.personalId);
+    // this.personalToDisplay = this.personalService.getPersonalById(this.personalId);
   }
 
 }

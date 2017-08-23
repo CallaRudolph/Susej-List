@@ -6,7 +6,6 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class PersonalService {
   personals: FirebaseListObservable<any[]>;
-  //personal?//
 
   constructor(private database: AngularFireDatabase) {
     this.personals = database.list('personals');
@@ -14,6 +13,10 @@ export class PersonalService {
 
   getPersonals() {
     return this.personals;
+  }
+
+  addPersonal(newPersonal: Personal) {
+    this.personals.push(newPersonal);
   }
 
   getPersonalById(personalId: number) {

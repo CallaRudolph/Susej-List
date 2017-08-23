@@ -26,6 +26,6 @@ export class PersonalComponent implements OnInit {
 
   submitForm(title: string, location: string, age: number, body: string) {
     var newPersonal: Personal = new Personal(title, location, age, body);
-    console.log(newPersonal);
+    this.personalService.addPersonal(newPersonal);
   }
 }
