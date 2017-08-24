@@ -15,6 +15,7 @@ import { ForSaleComponent } from './for-sale/for-sale.component';
 import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.component';
 import { EditForSaleComponent } from './edit-for-sale/edit-for-sale.component';
 import { AgePipePipe } from './age-pipe.pipe';
+import { PricePipePipe } from './price-pipe.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     ForSaleComponent,
     ForSaleDetailComponent,
     EditForSaleComponent,
-    AgePipePipe
+    AgePipePipe,
+    PricePipePipe
   ],
   imports: [
     BrowserModule,
