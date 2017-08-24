@@ -2,6 +2,7 @@
 <h4>${{(forSaleToDisplay | async).price}}, located in {{(forSaleToDisplay | async).location}}</h4>
 <br>
 <h4>"{{(forSaleToDisplay | async).body}}"</h4>
-<img src="{{(forSaleToDisplay | async).image}}" alt="PIC OF IMAGE">
+<a href="https://www.youtube.com/watch?v=oJ7L8GcBOAg" target="_blank"><img src="{{(forSaleToDisplay | async).image}}" alt="PIC OF SALE IMAGE"></a>
+
 <hr>
 <app-edit-for-sale [selectedForSale]="forSaleToDisplay | async"></app-edit-for-sale>

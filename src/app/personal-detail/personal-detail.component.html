@@ -4,6 +4,7 @@
 <h4>{{(personalToDisplay | async).location}}, {{(personalToDisplay | async).age}} years old</h4>
 <br>
 <h4>"{{(personalToDisplay | async).body}}"</h4>
-<img src="{{(personalToDisplay | async).image}}" alt="PIC OF PERSON">
+<a href="https://www.youtube.com/watch?v=oJ7L8GcBOAg" target="_blank"><img src="{{(personalToDisplay | async).image}}" alt="PIC OF PERSON"></a>
+<!-- <img src="{{(personalToDisplay | async).image}}" alt="PIC OF PERSON"> -->
 <hr>
 <app-edit-personal [selectedPersonal]="personalToDisplay | async"></app-edit-personal>
