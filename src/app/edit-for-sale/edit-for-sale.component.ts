@@ -21,4 +21,10 @@ export class EditForSaleComponent implements OnInit {
     this.forSaleService.updateForSale(forSaleToUpdate);
   }
 
+  beginDeletingForSale(forSaleToDelete) {
+    if(confirm("sure??")){
+      this.forSaleService.deleteForSale(forSaleToDelete);
+      this.router.navigate(['for-sale']);
+    }
+  }
 }

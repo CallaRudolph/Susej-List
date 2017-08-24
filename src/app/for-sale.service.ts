@@ -30,4 +30,9 @@ export class ForSaleService {
                                     body: localUpdatedForSale.body});
   }
 
+  deleteForSale(localForSaleToDelete) {
+    var forSaleEntryInFirebase = this.getForSaleById(localForSaleToDelete.$key);
+    forSaleEntryInFirebase.remove();
+  }
+
 }

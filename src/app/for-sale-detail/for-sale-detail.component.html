@@ -2,5 +2,5 @@
 <h4>${{(forSaleToDisplay | async).price}}, located in {{(forSaleToDisplay | async).location}}</h4>
 <br>
 <h4>"{{(forSaleToDisplay | async).body}}"</h4>
-
+<hr>
 <app-edit-for-sale [selectedForSale]="forSaleToDisplay | async"></app-edit-for-sale>
