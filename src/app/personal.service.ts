@@ -28,7 +28,8 @@ export class PersonalService {
     personalEntryInFirebase.update({title: localUpdatedPersonal.title,
                                     location: localUpdatedPersonal.location,
                                     age: localUpdatedPersonal.age,
-                                    body: localUpdatedPersonal.body});
+                                    body: localUpdatedPersonal.body,
+                                    image: localUpdatedPersonal.image});
   }
 
   deletePersonal(localPersonalToDelete) {

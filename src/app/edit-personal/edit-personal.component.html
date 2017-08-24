@@ -14,6 +14,10 @@
 
 <label>New Description:</label>
 <textarea [(ngModel)]="selectedPersonal.body"></textarea>
+<br>
+
+<label>New Image:</label>
+<textarea [(ngModel)]="selectedPersonal.image"></textarea>
 
 <button (click)="beginUpdatingPersonal(selectedPersonal)">Update it</button>
 <button (click)="beginDeletingPersonal(selectedPersonal)">Let it go</button>

@@ -27,7 +27,8 @@ export class ForSaleService {
     forSaleEntryInFirebase.update({title: localUpdatedForSale.title,
                                     location: localUpdatedForSale.location,
                                     price: localUpdatedForSale.price,
-                                    body: localUpdatedForSale.body});
+                                    body: localUpdatedForSale.body,
+                                    image: localUpdatedForSale.image});
   }
 
   deleteForSale(localForSaleToDelete) {
