@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ForSaleComponent implements OnInit {
 
   forSale: FirebaseListObservable<any[]>;
+  filterByPrice: string = "allPrices";
 
   constructor(private router: Router, private forSaleService: ForSaleService) { }
 
@@ -28,5 +29,9 @@ export class ForSaleComponent implements OnInit {
     var newForSale: ForSale = new ForSale(title, location, price, body);
     this.forSaleService.addForSale(newForSale);
   }
+
+  onChange(optionFromMenu) {
+  this.filterByPrice = optionFromMenu;
+}
 
 }

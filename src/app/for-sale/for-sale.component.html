@@ -1,6 +1,13 @@
 <h2>For Sale</h2>
 
-<div *ngFor="let item of forSale | async" (click)="goToDetailPage(item)">
+<select (change)="onChange($event.target.value)">
+  <option value="allPrices" selected="selected">All Prices</option>
+  <option value="inexpensivePrices">Inexpensive Prices</option>
+  <option value="moderatePrices">Moderate Prices</option>
+  <option value="expensivePrices">Expensive Prices</option>
+</select>
+
+<div *ngFor="let item of forSale | async | pricePipe:filterByPrice" (click)="goToDetailPage(item)">
   <div>
     <h3><em>{{item.title}}</em></h3>
   </div>
