@@ -25,8 +25,8 @@ export class PersonalComponent implements OnInit {
     this.router.navigate(['personals', clickedPersonal.$key]);
   }
 
-  submitForm(title: string, location: string, age: number, body: string) {
-    var newPersonal: Personal = new Personal(title, location, age, body);
+  submitForm(title: string, location: string, age: number, body: string, image: string) {
+    var newPersonal: Personal = new Personal(title, location, age, body, image);
     this.personalService.addPersonal(newPersonal);
   }
 

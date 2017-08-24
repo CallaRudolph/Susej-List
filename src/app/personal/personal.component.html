@@ -37,6 +37,12 @@
     <br>
     <textarea #newBody></textarea>
   </div>
+
+  <div>
+    <label>Show us more with a pic</label>
+    <br>
+    <input #newImage>
+  </div>
 </div>
 
-<button (click)="submitForm(newTitle.value, newLocation.value, newAge.value, newBody.value); newTitle.value=''; newLocation.value=''; newAge.value=''; newBody.value='';">Make it happen</button>
+<button (click)="submitForm(newTitle.value, newLocation.value, newAge.value, newBody.value, newImage.value); newTitle.value=''; newLocation.value=''; newAge.value=''; newBody.value=''; newImage.value='';">Make it happen</button>

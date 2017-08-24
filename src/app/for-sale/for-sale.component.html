@@ -41,4 +41,10 @@
   </div>
 </div>
 
-<button (click)="submitForm(newTitle.value, newLocation.value, newPrice.value, newBody.value); newTitle.value=''; newLocation.value=''; newPrice.value=''; newBody.value='';">Get it sold!</button>
+<div>
+  <label>Add an image</label>
+  <br>
+  <input #newImage>
+</div>
+
+<button (click)="submitForm(newTitle.value, newLocation.value, newPrice.value, newBody.value, newImage.value); newTitle.value=''; newLocation.value=''; newPrice.value=''; newBody.value=''; newImage.value='';">Get it sold!</button>

@@ -25,8 +25,8 @@ export class ForSaleComponent implements OnInit {
     this.router.navigate(['for-sale', clickedForSale.$key]);
   }
 
-  submitForm(title: string, location: string, price: number, body: string) {
-    var newForSale: ForSale = new ForSale(title, location, price, body);
+  submitForm(title: string, location: string, price: number, body: string, image: string) {
+    var newForSale: ForSale = new ForSale(title, location, price, body, image);
     this.forSaleService.addForSale(newForSale);
   }
 

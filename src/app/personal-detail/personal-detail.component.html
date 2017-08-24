@@ -4,5 +4,6 @@
 <h4>{{(personalToDisplay | async).location}}, {{(personalToDisplay | async).age}} years old</h4>
 <br>
 <h4>"{{(personalToDisplay | async).body}}"</h4>
+<img src="{{(personalToDisplay | async).image}}" alt="PIC OF PERSON">
 <hr>
 <app-edit-personal [selectedPersonal]="personalToDisplay | async"></app-edit-personal>
