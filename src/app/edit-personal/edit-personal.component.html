@@ -13,7 +13,7 @@
 <br>
 
 <label>New Description:</label>
-<input [(ngModel)]="selectedPersonal.body">
+<textarea [(ngModel)]="selectedPersonal.body"></textarea>
 
 <button (click)="beginUpdatingPersonal(selectedPersonal)">Update it</button>
 <button (click)="beginDeletingPersonal(selectedPersonal)">Let it go</button>

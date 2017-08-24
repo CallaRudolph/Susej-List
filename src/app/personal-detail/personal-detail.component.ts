@@ -24,6 +24,7 @@ export class PersonalDetailComponent implements OnInit {
       this.personalId = (urlParameters['id']);
     });
     this.personalToDisplay = this.personalService.getPersonalById(this.personalId);
+    console.log(this.personalToDisplay);
   }
 
 }
