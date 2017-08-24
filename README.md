@@ -1,5 +1,6 @@
 # Craigslist
-
+#### _Epicodus Angular Javascript: Angular CLI, Dynamic Routing, and Persistent Data with Firebase, August 24, 2017_
+_**By Michelle Poterek and Calla Rudoloph**_
 
 ## Installation instructions
 * $ `npm install`
@@ -8,6 +9,7 @@
 * First off, you'll need to make a free account at Firebase's website. [Firebase](https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup)
 * Create a New Project. Select this option, provide a name for your new project, and select your Country/region from the drop-down menu.
 * Select Add Firebase to your web app.
+![Preview of instructions](src/assets/img/toWebapp.png)
 * make src/app/api-keys.ts
 * paste the code below into your api-keys.ts file.
 
@@ -22,8 +24,31 @@ export var masterFirebaseConfig = {
 
 ````
 * With the information provided in the modal, replace the "xxxx" variables with your own firebase credentials in your api-keys.ts file.
+* In Terminal, run `$ ng serve`
+* In your Browser (Chrome preferred) navigate to [http://localhost:4200/](http://localhost:4200/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## User Story
+* As a user, I want to see all of the categories on the main page.
+* As a user, I want to click a category to navigate to a page with all its listings.
+* As a user, I want to click a listing to see its contents.
+* As a user, I want to click on a listing to view its details.
+* As a user, I want to add a new listing to a category of my choosing.
+* As a user, I want the option to update my listing, if I need to.
+* As a user, I want the option to delete my listing if I no longer need it.
+
+## Screenshot of Program
+![Preview of for Sale Post](src/assets/img/forSale.png)
+_This image is a screenshot of an individual posting_
+
+## Technologies Used
+* Angular CLI
+* TypeScript
+* Firebase
+* Bootstrap, CSS, and HTML
+
+----
 
 ## Development server
 
