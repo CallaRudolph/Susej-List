@@ -1,0 +1,19 @@
+<h4>Edit this</h4>
+
+<label>New Title:</label>
+<input [(ngModel)]="selectedForSale.title">
+<br>
+
+<label>Change location:</label>
+<input [(ngModel)]="selectedForSale.location">
+<br>
+
+<label>New price</label>
+<input [(ngModel)]="selectedForSale.price">
+<br>
+
+<label>New Description:</label>
+<input [(ngModel)]="selectedForSale.body">
+
+<button (click)="beginUpdatingForSale(selectedForSale)">Update it</button>
+<!-- <button (click)="beginDeletingForSale(selectedForSale)">Let it go</button> -->

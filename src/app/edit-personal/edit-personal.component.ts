@@ -15,7 +15,6 @@ export class EditPersonalComponent implements OnInit {
   constructor(private router: Router, private personalService: PersonalService) { }
 
   ngOnInit() {
-    console.log(this.selectedPersonal);
   }
 
   beginUpdatingPersonal(personalToUpdate) {

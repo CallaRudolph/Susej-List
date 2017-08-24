@@ -22,4 +22,12 @@ export class ForSaleService {
     return this.database.object('/for-sale/' + forSaleId);
   }
 
+  updateForSale(localUpdatedForSale) {
+    var forSaleEntryInFirebase = this.getForSaleById(localUpdatedForSale.$key);
+    forSaleEntryInFirebase.update({title: localUpdatedForSale.title,
+                                    location: localUpdatedForSale.location,
+                                    price: localUpdatedForSale.price,
+                                    body: localUpdatedForSale.body});
+  }
+
 }
