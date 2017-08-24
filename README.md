@@ -44,6 +44,8 @@ _This image is a screenshot of an individual posting_
 
 ## Technologies Used
 * Angular CLI
+* NodeJS
+* Bower
 * TypeScript
 * Firebase
 * Bootstrap, CSS, and HTML
