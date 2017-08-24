@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class PersonalComponent implements OnInit {
 
   personals: FirebaseListObservable<any[]>;
+  filterByAge: string = "allPersonals";
 
   constructor(private router: Router, private personalService: PersonalService) {}
 
@@ -27,5 +28,9 @@ export class PersonalComponent implements OnInit {
   submitForm(title: string, location: string, age: number, body: string) {
     var newPersonal: Personal = new Personal(title, location, age, body);
     this.personalService.addPersonal(newPersonal);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
   }
 }

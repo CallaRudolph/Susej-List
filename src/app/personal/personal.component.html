@@ -1,6 +1,11 @@
 <h2>Personals</h2>
+<select (change)="onChange($event.target.value)">
+   <option value="allPersonals" selected="selected">All Personals</option>
+   <option value="oldPersonals">Old Personals</option>
+   <option value="youngPersonals">Young Personals</option>
+ </select>
 
-<div *ngFor="let personal of personals | async" (click)="goToDetailPage(personal)">
+<div *ngFor="let personal of personals | async | agePipe:filterByAge" (click)="goToDetailPage(personal)">
   <div>
     <h3><em>{{personal.title}}</em></h3>
   </div>
