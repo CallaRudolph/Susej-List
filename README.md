@@ -1,17 +1,55 @@
-# Craigslist
+# Susej-List
 #### _Epicodus Angular Javascript: Angular CLI, Dynamic Routing, and Persistent Data with Firebase, August 24, 2017_
-_**By Michelle Poterek and Calla Rudoloph**_
+_**By Michelle Poterek and Calla Rudolph**_
 
-## Installation instructions
-* $ `npm install`
-* $ `bower install`
-* for firebase:
-* First off, you'll need to make a free account at Firebase's website. [Firebase](https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup)
-* Create a New Project. Select this option, provide a name for your new project, and select your Country/region from the drop-down menu.
-* Select Add Firebase to your web app.
-![Preview of instructions](src/assets/img/toWebapp.png)
-* make src/app/api-keys.ts
-* paste the code below into your api-keys.ts file.
+This website has been deployed for easy viewing: https://susej-list.firebaseapp.com
+
+## User Story
+* As a user, I want to see all of the categories on the main page.
+* As a user, I want to click a category to navigate to a page with all its listings.
+* As a user, I want to click a listing to see its contents.
+* As a user, I want to add a new listing to a category of my choosing.
+* As a user, I want the option to update my listing, if I need to.
+* As a user, I want the option to delete my listing if I no longer need it.
+
+## Screenshot of Program
+![Preview of for Sale Post](src/assets/img/forSale.png)
+_This image is a screenshot of an individual posting_
+
+
+## Prerequisites
+
+You will need the following things properly installed on your computer:
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Angular](https://cli.angular.io/) (in Terminal: $ npm install -g @angular/cli@1.0.0)
+* [TypeScript](https://www.typescriptlang.org/) (from NPM in Terminal: $ npm install typescript -g)
+* [Bower](https://bower.io/)
+* You will need Firebase to clone this project. Make a free account at [Firebase](https://firebase.google.com/).
+  * Once logged in to Firebase, select `Create a New Project` and give the project a name.
+  * In the Overview section, select `Add Firebase to your web app`. Keep this modal handy for use in just a moment.
+  ![Preview of instructions](src/assets/img/toWebapp.png)
+
+_Need Firebase help?_
+[Further Instructions](https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup)
+
+## Installation
+* Open Github site in your browser: https://github.com/CallaRudolph/Susej-List
+* Select green drop-down box to Clone or Download
+* Open Terminal on your computer and follow these steps:
+
+````
+$ cd desktop
+$ git clone <paste repository-url>
+$ cd Susej-List
+$ npm install
+$ bower install
+$ ng build
+$ touch src/app/api-keys.ts
+$ atom .
+````
+
+* Paste the code below into your api-keys.ts file:
 
 ````
 export var masterFirebaseConfig = {
@@ -24,23 +62,10 @@ export var masterFirebaseConfig = {
 
 ````
 * With the information provided in the modal, replace the "xxxx" variables with your own firebase credentials in your api-keys.ts file.
-* In Terminal, run `$ ng serve`
-* In your Browser (Chrome preferred) navigate to [http://localhost:4200/](http://localhost:4200/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## Development server
 
-## User Story
-* As a user, I want to see all of the categories on the main page.
-* As a user, I want to click a category to navigate to a page with all its listings.
-* As a user, I want to click a listing to see its contents.
-* As a user, I want to click on a listing to view its details.
-* As a user, I want to add a new listing to a category of my choosing.
-* As a user, I want the option to update my listing, if I need to.
-* As a user, I want the option to delete my listing if I no longer need it.
-
-## Screenshot of Program
-![Preview of for Sale Post](src/assets/img/forSale.png)
-_This image is a screenshot of an individual posting_
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Technologies Used
 * Angular CLI
@@ -49,12 +74,15 @@ _This image is a screenshot of an individual posting_
 * TypeScript
 * Firebase
 * Bootstrap, CSS, and HTML
+* _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0._
+
+## License
+
+Copyright &copy; 2017 Michelle Poterek & Calla Rudolph
+
+This software is licensed under the MIT license.
 
 ----
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
